@@ -129,7 +129,6 @@ h2 span {
     animation-delay: 400ms;
 }
 
-
 .hero-section a {
     height: 3rem;
     width: 100%;
@@ -187,7 +186,7 @@ h2 span {
     border-radius: 1.5rem;
 }
 
-.projetos-section p {
+.projetos-section>p {
     max-width: 50ch;
     margin-left: auto;
     margin-right: auto;
@@ -246,6 +245,13 @@ h2 span {
     justify-content: center;
 
     border-radius: 1.5rem;
+}
+
+.projetos-section article div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem
 }
 
 .contato-section div p {
