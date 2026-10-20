@@ -236,6 +236,11 @@ h2 span {
     border-radius: 1.5rem;
 }
 
+.contato-section div p {
+    max-width: 45ch;
+    margin: 1rem auto;
+}
+
 .contato-section form {
     display: flex;
     flex-direction: column;
@@ -244,6 +249,11 @@ h2 span {
     padding: .875rem 1rem;
     /* padding: top/bottom left/right */
     border-radius: 1.5rem;
+    width: 100%;
+    max-width: 30rem;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin: top right bottom left */
 }
 
 form input,
@@ -270,7 +280,7 @@ form button {
 }
 
 form textarea {
-    height: 20rem;
+    height: 12rem;
 }
 
 form input,
@@ -281,6 +291,7 @@ form button {
 form button {
     color: var(--cor-texto-button-primario);
     background-color: var(--bg-button-primario);
+    cursor: pointer;
 }
 
 footer {
@@ -308,6 +319,7 @@ footer a {
 }
 
 @media screen and (min-width:48rem) {
+
     .hero-section ul {
         flex-direction: row;
     }
@@ -322,9 +334,34 @@ footer a {
         text-align: left;
     }
 
+    .about-text {
+        text-align: left;
+    }
+
     .projetos-section ul {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (min-width: 75rem) {
+    .projetos-section ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .contato-section {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .contato-section div {
+        text-align: left;
+    }
+
+    .contato-section div p {
+        margin: 1rem 0;
     }
 }
