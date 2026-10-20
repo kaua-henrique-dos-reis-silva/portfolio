@@ -92,13 +92,20 @@ header ul li a {
     color: var(--cor-texto-titulo);
     margin-bottom: 1rem;
     max-width: 20ch;
+    animation: transicao-texto 1s ease-out both;
 }
 
 h2 span {
     background-image: var(--cor-gradient);
-    -webkit-background-clip: text;
     background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
+    background-size: 300% 300%;
+    background-position: 0% 50%;
+
+    animation-name: gradiente-animacao;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 .hero-section p {
@@ -106,6 +113,8 @@ h2 span {
     line-height: 1.5;
     font-size: clamp(1.125rem, 3vw, 1.5rem);
     max-width: 38ch;
+    animation: transicao-texto 1s ease-out both;
+    animation-delay: 200ms;
 }
 
 .hero-section ul {
@@ -116,7 +125,10 @@ h2 span {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    animation: transicao-texto 1s ease-out both;
+    animation-delay: 400ms;
 }
+
 
 .hero-section a {
     height: 3rem;
@@ -363,5 +375,32 @@ footer a {
 
     .contato-section div p {
         margin: 1rem 0;
+
+    }
+}
+
+@keyframes gradiente-animacao {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes transicao-texto {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
