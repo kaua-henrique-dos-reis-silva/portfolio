@@ -30,11 +30,17 @@ header li {
 }
 
 .hero-section li:hover,
-header h1:hover,
 header a:hover,
 form button:hover {
     opacity: 0.5;
     transition: opacity 0.3s ease;
+}
+
+header a:focus-visible,
+footer a:focus-visible {
+    outline: 0.125rem solid #2563eb;
+    outline-offset: 0.125rem;
+    border-radius: 2rem;
 }
 
 .projetos-section a:hover {
